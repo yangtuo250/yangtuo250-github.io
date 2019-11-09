@@ -165,7 +165,7 @@
         <span class="post-meta-item-icon">
             <i class="fa fa-keyboard-o"></i>
             <span class="post-meta-item-text"> 废话字数: </span>
-            <span class="post-count">464字</span>
+            <span class="post-count">490字</span>
         </span>
     </span>
 
@@ -205,12 +205,14 @@
 <p>在<code>theme/yilia/layout/_partial/artical.ejs</code>中<code>/artical/div[@class=&quot;article-inner&quot;]/header[@class=&quot;article-header&quot;]</code>的<code>if (!post.noDate) {}</code>中增加</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(theme.word_count &amp;&amp; !post.no_word_count)&#123;%&gt;</span><br><span class="line">    &lt;%- partial(<span class="string">'post/word'</span>) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="三-增加访问统计"><a href="#三-增加访问统计" class="headerlink" title="三 增加访问统计"></a>三 增加访问统计</h2><h3 id="1-网站访问统计"><a href="#1-网站访问统计" class="headerlink" title="1 网站访问统计"></a>1 网站访问统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="三-增加访问统计"><a href="#三-增加访问统计" class="headerlink" title="三 增加访问统计"></a>三 增加访问统计</h2><h3 id="1-网站访问统计"><a href="#1-网站访问统计" class="headerlink" title="1 网站访问统计"></a>1 网站访问统计</h3><p>在<code>theme/yilia/layout/_partial/footer.ejs</code>中增加</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>并在<code>/footer/div/div/div[@class=&quot;footer-left&quot;]</code>(在左边)或者新增<code>/footer/div/div/div[@class=&quot;footer-middle&quot;]</code>（在中间）增加</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span><br><span class="line">    有&lt;span id=<span class="string">"busuanzi_value_site_uv"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>人迷路了</span><br><span class="line">&lt;<span class="regexp">/span&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-文章访问统计"><a href="#2-文章访问统计" class="headerlink" title="2 文章访问统计"></a>2 文章访问统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">&lt;% if ( !index )&#123; %&gt;</span><br><span class="line">    &lt;span class=&quot;archive-article-date&quot;&gt;</span><br><span class="line">    没品位的人 &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-文章访问统计"><a href="#2-文章访问统计" class="headerlink" title="2 文章访问统计"></a>2 文章访问统计</h3><p>在<code>theme/yilia/layout/_partial/artical.ejs</code>中<code>/artical/div[@class=&quot;article-inner&quot;]/header[@class=&quot;article-header&quot;]</code>中增加</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> ( !index )&#123; %&gt;</span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"archive-article-date"</span>&gt;</span><br><span class="line">    没品位的人 &lt;span id=<span class="string">"busuanzi_value_page_pv"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">    &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 
       
 
