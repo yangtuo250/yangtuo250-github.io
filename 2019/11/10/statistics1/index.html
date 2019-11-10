@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://yangtuo250.github.io">
   <title>statistics1 | yangtuo250&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[toc]">
+  <meta name="description" content="Problem 1 松鼠、熊与下雪 1. 与B山相比，A山的$P(发现松鼠,下雪)$更高。同时，$P(发现松鼠,不下雪)$也是A山更高。试问能否断言A山的$P(发现松鼠)$更高？ 2. 与D山相比，C山的$P(发现松鼠|下雪)$更高。同时，$P(发现松鼠|不下雪)$也是C山更高。试问能否断言C山的$P(发现松鼠)$更高？ 3. 对于E山，有如下事实： &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbs">
 <meta name="keywords" content="statistics,math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="statistics1">
 <meta property="og:url" content="https:&#x2F;&#x2F;yangtuo250.github.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;statistics1&#x2F;">
 <meta property="og:site_name" content="yangtuo250&#39;s blog">
-<meta property="og:description" content="[toc]">
+<meta property="og:description" content="Problem 1 松鼠、熊与下雪 1. 与B山相比，A山的$P(发现松鼠,下雪)$更高。同时，$P(发现松鼠,不下雪)$也是A山更高。试问能否断言A山的$P(发现松鼠)$更高？ 2. 与D山相比，C山的$P(发现松鼠|下雪)$更高。同时，$P(发现松鼠|不下雪)$也是C山更高。试问能否断言C山的$P(发现松鼠)$更高？ 3. 对于E山，有如下事实： &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbs">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-10T09:37:24.097Z">
+<meta property="og:updated_time" content="2019-11-10T09:56:47.396Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="yangtuo250&#39;s blog" type="application/atom+xml">
@@ -160,7 +160,7 @@
         <span class="post-meta-item-icon">
             <i class="fa fa-keyboard-o"></i>
             <span class="post-meta-item-text"> 废话字数: </span>
-            <span class="post-count">188字</span>
+            <span class="post-count">374字</span>
         </span>
     </span>
 
@@ -184,9 +184,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[toc]</p>
-<a id="more"></a>
+        <ul>
+<li><a href="#problem-1-%e6%9d%be%e9%bc%a0%e7%86%8a%e4%b8%8e%e4%b8%8b%e9%9b%aa">Problem 1 松鼠、熊与下雪</a><ul>
+<li><a href="#1-%e4%b8%8eb%e5%b1%b1%e7%9b%b8%e6%af%94a%e5%b1%b1%e7%9a%84p%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e4%b8%8b%e9%9b%aa%e6%9b%b4%e9%ab%98%e5%90%8c%e6%97%b6p%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e4%b8%8d%e4%b8%8b%e9%9b%aa%e4%b9%9f%e6%98%afa%e5%b1%b1%e6%9b%b4%e9%ab%98%e8%af%95%e9%97%ae%e8%83%bd%e5%90%a6%e6%96%ad%e8%a8%80a%e5%b1%b1%e7%9a%84p%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e6%9b%b4%e9%ab%98">1. 与B山相比，A山的$P(发现松鼠,下雪)$更高。同时，$P(发现松鼠,不下雪)$也是A山更高。试问能否断言A山的$P(发现松鼠)$更高？</a></li>
+<li><a href="#2-%e4%b8%8ed%e5%b1%b1%e7%9b%b8%e6%af%94c%e5%b1%b1%e7%9a%84p%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e4%b8%8b%e9%9b%aa%e6%9b%b4%e9%ab%98%e5%90%8c%e6%97%b6p%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e4%b8%8d%e4%b8%8b%e9%9b%aa%e4%b9%9f%e6%98%afc%e5%b1%b1%e6%9b%b4%e9%ab%98%e8%af%95%e9%97%ae%e8%83%bd%e5%90%a6%e6%96%ad%e8%a8%80c%e5%b1%b1%e7%9a%84p%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e6%9b%b4%e9%ab%98">2. 与D山相比，C山的$P(发现松鼠|下雪)$更高。同时，$P(发现松鼠|不下雪)$也是C山更高。试问能否断言C山的$P(发现松鼠)$更高？</a></li>
+<li><a href="#3-%e5%af%b9%e4%ba%8ee%e5%b1%b1%e6%9c%89%e5%a6%82%e4%b8%8b%e4%ba%8b%e5%ae%9e">3. 对于E山，有如下事实：</a></li>
+<li><a href="#nbspnbspnbspnbspnbspnbspnbspnbspnbspnbspp%e5%8f%91%e7%8e%b0%e7%86%8a%e4%b8%8b%e9%9b%aap%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e4%b8%8b%e9%9b%aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(发现熊|下雪)&lt;P(发现松鼠|下雪)$</a></li>
+<li><a href="#nbspnbspnbspnbspnbspnbspnbspnbspnbspnbspp%e5%8f%91%e7%8e%b0%e7%86%8a%e4%b8%8d%e4%b8%8b%e9%9b%aap%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0%e4%b8%8d%e4%b8%8b%e9%9b%aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(发现熊|不下雪)&lt;P(发现松鼠|不下雪)$</a></li>
+<li><a href="#%e8%af%95%e9%97%ae%e8%83%bd%e5%90%a6%e6%96%ad%e8%a8%80e%e5%b1%b1%e7%9a%84p%e5%8f%91%e7%8e%b0%e7%86%8ap%e5%8f%91%e7%8e%b0%e6%9d%be%e9%bc%a0">试问能否断言E山的$P(发现熊)&lt;P(发现松鼠)$？</a><a id="more"></a>
 
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="Problem-1-松鼠、熊与下雪"><a href="#Problem-1-松鼠、熊与下雪" class="headerlink" title="Problem 1 松鼠、熊与下雪"></a>Problem 1 松鼠、熊与下雪</h2><h3 id="1-与B山相比，A山的-P-发现松鼠-下雪-更高。同时，-P-发现松鼠-不下雪-也是A山更高。试问能否断言A山的-P-发现松鼠-更高？"><a href="#1-与B山相比，A山的-P-发现松鼠-下雪-更高。同时，-P-发现松鼠-不下雪-也是A山更高。试问能否断言A山的-P-发现松鼠-更高？" class="headerlink" title="1. 与B山相比，A山的$P(发现松鼠,下雪)$更高。同时，$P(发现松鼠,不下雪)$也是A山更高。试问能否断言A山的$P(发现松鼠)$更高？"></a>1. 与B山相比，A山的$P(发现松鼠,下雪)$更高。同时，$P(发现松鼠,不下雪)$也是A山更高。试问能否断言A山的$P(发现松鼠)$更高？</h3><h3 id="2-与D山相比，C山的-P-发现松鼠-下雪-更高。同时，-P-发现松鼠-不下雪-也是C山更高。试问能否断言C山的-P-发现松鼠-更高？"><a href="#2-与D山相比，C山的-P-发现松鼠-下雪-更高。同时，-P-发现松鼠-不下雪-也是C山更高。试问能否断言C山的-P-发现松鼠-更高？" class="headerlink" title="2. 与D山相比，C山的$P(发现松鼠|下雪)$更高。同时，$P(发现松鼠|不下雪)$也是C山更高。试问能否断言C山的$P(发现松鼠)$更高？"></a>2. 与D山相比，C山的$P(发现松鼠|下雪)$更高。同时，$P(发现松鼠|不下雪)$也是C山更高。试问能否断言C山的$P(发现松鼠)$更高？</h3><h3 id="3-对于E山，有如下事实："><a href="#3-对于E山，有如下事实：" class="headerlink" title="3. 对于E山，有如下事实："></a>3. 对于E山，有如下事实：</h3><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-P-发现熊-下雪-lt-P-发现松鼠-下雪"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-P-发现熊-下雪-lt-P-发现松鼠-下雪" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(发现熊|下雪)&lt;P(发现松鼠|下雪)$"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(发现熊|下雪)&lt;P(发现松鼠|下雪)$</h3><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-P-发现熊-不下雪-lt-P-发现松鼠-不下雪"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-P-发现熊-不下雪-lt-P-发现松鼠-不下雪" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(发现熊|不下雪)&lt;P(发现松鼠|不下雪)$"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(发现熊|不下雪)&lt;P(发现松鼠|不下雪)$</h3><h3 id="试问能否断言E山的-P-发现熊-lt-P-发现松鼠-？"><a href="#试问能否断言E山的-P-发现熊-lt-P-发现松鼠-？" class="headerlink" title="试问能否断言E山的$P(发现熊)&lt;P(发现松鼠)$？"></a>试问能否断言E山的$P(发现熊)&lt;P(发现松鼠)$？</h3>
       
 
